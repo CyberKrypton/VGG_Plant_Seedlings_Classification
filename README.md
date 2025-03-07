@@ -1,5 +1,5 @@
 # VGG_Plant_Seedlings_Classification
-参考 **mmastererliu** 作者的 **vggmast** 项目，https://github.com/mmastererliu/vggmast
+在 **mmastererliu** 作者的 **vggmast** 项目上增加了点内容，https://github.com/mmastererliu/vggmast
 
 ## 简介
 基于 OnethingAI 云平台完成的大数据课程作业。
@@ -14,7 +14,12 @@
 - **CPU**: 16 核
 - **内存**: 64G
 - **GPU**: NVIDIA RTX 4090 24G 
-
+## 流程
+- 运行 txt.py 对 train 文件夹下的数据集生成标签文件
+- 修改 main.py 中的 epoch batchsize 等参数后运行等待生成 bestmodel.pth 、损失函数和精度图，存放在根目录
+- 运行 evaluate.py 对模型进行评估，生成 mAP 曲线、混淆矩阵图、个分类指标，存放在新生成的 evaluation 文件夹
+- 运行 predict.py 对test文件夹下的图片进行识别，结果图存放在新生成的 predict 文件夹
+- model 文件夹放的是预训练模型权重
 ## 结果
 ![Image](https://github.com/user-attachments/assets/48493778-525e-421f-9d60-0292d3d5bf6e)
 ![Image](https://github.com/user-attachments/assets/de27d758-8c92-4bc6-a038-f5ec39c791a8)
